@@ -1,0 +1,29 @@
+
+<div class="box">
+    <ng-container *ngIf="!isConversation; else chatbox">
+        <div *ngIf="contacts && contacts.length>0 ">
+            <div (click)="onConversationClick(contact)" class="contact-card" *ngFor="let contact of contacts">
+                {{contact.identity || 'Me'}}
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #chatbox>
+        <div>
+            <button (click)="goBack()">Back</button>
+        </div>
+        <div *ngFor="let message of messages" >
+            <!-- {{message}} -->
+            <!-- <div >
+                <h4>Messageds</h4>
+            </div> -->
+            <app-message [msg]="message" [ngClass]="{'right':username===message.state.author}" ></app-message>
+        </div>
+        <div class="container-form">
+            <input class="inputStyle" type="text" placeholder="Enter Message" #txtmsg >
+            <button (click)="sendMessage(txtmsg.value);txtmsg.value=''">Send</button>
+        </div>
+    </ng-template>
+ 
+  
+</div>
+   

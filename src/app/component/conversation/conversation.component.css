@@ -1,0 +1,36 @@
+/* .conversation {
+    position: fixed;
+    top: 100px;
+    bottom: 100px;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 90%;
+    left: 5%;
+  } */
+  .right
+  {
+    display: flex;
+    justify-content: end;
+  }
+  .box
+  {
+    padding:2em;
+  }
+  .container-form
+  {
+    position: fixed;
+    bottom:5px;
+    z-index: 22;
+    width:100vw;
+  }
+  .inputStyle
+  {
+    width:80%;
+  }
+  .contact-card
+  {
+    padding:1em;
+    border-bottom:1px solid black;
+    
+  }
