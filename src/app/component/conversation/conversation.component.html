@@ -1,29 +1,32 @@
-
 <div class="box">
+    <div class="convs-btn">
+        <button mat-raised-button color="accent" (click)="createConversation()">Create Conversation</button>
+    </div>
     <ng-container *ngIf="!isConversation; else chatbox">
         <div *ngIf="contacts && contacts.length>0 ">
             <div (click)="onConversationClick(contact)" class="contact-card" *ngFor="let contact of contacts">
                 {{contact.identity || 'Me'}}
+                <div class="right">
+                    <button (click)="deleteConvs($event,contact)">Delete Conversation</button>
+                </div>
             </div>
+            
         </div>
     </ng-container>
     <ng-template #chatbox>
         <div>
             <button (click)="goBack()">Back</button>
         </div>
-        <div *ngFor="let message of messages" >
-            <!-- {{message}} -->
-            <!-- <div >
-                <h4>Messageds</h4>
-            </div> -->
-            <app-message [msg]="message" [ngClass]="{'right':username===message.state.author}" ></app-message>
+        <div class="btn">
+            <button mat-button (click)="addParticipant()">Add Participant</button>
+        </div>
+        <div *ngFor="let message of messages">
+            <app-message [msg]="message" [ngClass]="{'right':username===message.state.author}"></app-message>
         </div>
         <div class="container-form">
-            <input class="inputStyle" type="text" placeholder="Enter Message" #txtmsg >
+            <input class="inputStyle" type="text" placeholder="Enter Message" #txtmsg>
             <button (click)="sendMessage(txtmsg.value);txtmsg.value=''">Send</button>
         </div>
+       
     </ng-template>
- 
-  
 </div>
-   

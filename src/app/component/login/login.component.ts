@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Client } from '@twilio/conversations';
 
 import { MyserviceService } from 'src/app/shared/myservice.service';
 
@@ -25,10 +24,6 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token',this.token);
       localStorage.setItem('user_name',this.user_name);
       this.router.navigate(['/conversation']);
-      // const client=new Client(this.token);
-      // client.on('initialized',async ()=>{
-      // // const joinedConversation= await client.getConversationByUniqueName('newCons6');
-      // })
     });
    
   }

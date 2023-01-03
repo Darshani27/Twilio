@@ -1,0 +1,48 @@
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+  .btn-center {
+    display: flex;
+    justify-content: center;
+  }
+  button{
+    background-color: #04AA6D;
+    color: white;
+    padding: 1px 1px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  input[type=text]{
+    width: 400px;
+    padding: 15px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+button:hover {
+    opacity: 0.8;
+  }
+  
+  .inputStyle
+  {
+    width:200px;
+    height:20px;
+  }
+  mat-card
+  {
+    height:200px;
+    width:400px;
+  }

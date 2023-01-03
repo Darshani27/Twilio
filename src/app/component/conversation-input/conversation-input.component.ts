@@ -10,26 +10,27 @@ export class ConversationInputComponent implements OnInit {
 
   message:string='';
   response:any;
+  participantName:string='';
   constructor(private ms:MyserviceService) { }
 
   ngOnInit(): void {
   }
 
-  handleKeyDown(event:any)
-  {
-    this.message=event.target.value;
-    if(event.key==='Enter')
-    {
-      this.ms.getActiveUser().subscribe((res:Twilio.Conversation)=>{
-        if(res)
-        {
-          this.response=res;
-          this.response.sendMessage(this.message);
-          this.message='';
-        }
+  // handleKeyDown(event:any)
+  // {
+  //   this.message=event.target.value;
+  //   if(event.key==='Enter')
+  //   {
+  //     this.ms.getActiveUser().subscribe((res:Twilio.Conversation)=>{
+  //       if(res)
+  //       {
+  //         this.response=res;
+  //         this.response.sendMessage(this.message);
+  //         this.message='';
+  //       }
        
-      })
-    }
-  }
+  //     })
+  //   }
+  // }
 
 }

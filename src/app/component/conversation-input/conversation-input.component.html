@@ -1,7 +1,8 @@
 <div class = "conversation-input">
     <input 
+      [(ngModel)]="participantName"
       type="text"
-      (keydown)="handleKeyDown($event)" 
-      [value]="message"
-      placeholder="Type your message..." />
+      placeholder="Enter Participant Name..." />
+      <br>
+      <button  [mat-dialog-close]="participantName" mat-raised-button color="primary">Submit</button>
   </div>

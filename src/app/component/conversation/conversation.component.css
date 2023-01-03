@@ -34,3 +34,13 @@
     border-bottom:1px solid black;
     
   }
+  .btn
+  {
+    display: flex;
+    justify-content: end;
+  }
+  .convs-btn
+  {
+    display:flex;
+    justify-content: end;
+  }

@@ -1,6 +1,20 @@
-<form >
-    <input type="text" name="user_name" [(ngModel)]="user_name">
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
     <br>
-    <br>
-    <button mat-raised-button color="primary" (click)="getToken()">Login</button>
-</form>
+    <mat-card-content>
+        <form >
+            <input placeholder="Enter Username" class="inputStyle" type="text" name="user_name" [(ngModel)]="user_name">
+            <br>
+            <br>
+            <div class="btn-center">
+                <button mat-raised-button color="primary" (click)="getToken()">Login</button>
+            </div>
+        </form>
+    </mat-card-content>
+
+</mat-card>
+
+
+
+
+

@@ -1,10 +1,21 @@
-.conversation-input {
-    width: 90%;
-    position: fixed;
-    bottom: 25px;
-    left: 5%;
-  }
+
 
   input {
     width: 100%;
+    padding: 15px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  button{
+    color: white;
+    padding: 1px 1px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    opacity: 0.8;
   }
